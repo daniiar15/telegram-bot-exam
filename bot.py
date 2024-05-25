@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-from book_parser import get_books
+from fantasy_parser import get_books
 from proza_parser import get_books1
 from poema_parser import get_books2
 from sbornic_parser import get_books3

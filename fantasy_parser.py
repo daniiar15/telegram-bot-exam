@@ -1,4 +1,4 @@
-# book_parser.py
+# Фантастика и фэнтези
 import requests
 from bs4 import BeautifulSoup
 
