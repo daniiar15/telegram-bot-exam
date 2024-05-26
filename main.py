@@ -19,8 +19,7 @@ def start(message):
     btn3 = types.KeyboardButton('Поэма')
     btn4 = types.KeyboardButton('Сборник')
     btn5 = types.KeyboardButton('Детективы, Триллеры')
-    btn6 = types.KeyboardButton('Классика')
-    markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
+    markup.add(btn1, btn2, btn3, btn4, btn5)
     bot.send_message(chat_id=message.chat.id, 
                      text='Выберите жанр книг',
                      reply_markup=markup)
@@ -85,16 +84,5 @@ def handle_detectiv(message):
                          text=text, 
                          parse_mode='Markdown')
 
-@bot.message_handler(func=lambda message: message.text == 'Классика')
-def handle_classica(message):
-    books = get_books5()
-    for book in books:
-        text = f'*{book["name"]}*\n' \
-               f'Автор: {book["author_name"]}\n' \
-               f'Цена: {book["price"]}\n' \
-               f'[Изображение]({book["url_img"]})'
-        bot.send_message(chat_id=message.chat.id, 
-                         text=text, 
-                         parse_mode='Markdown')
 
 bot.polling()
