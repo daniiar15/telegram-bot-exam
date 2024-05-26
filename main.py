@@ -7,7 +7,7 @@ from sbornic_parser import get_books3
 from detectiv_parser import get_books4
 from classica_parser import get_books5
 
-token = '6498617644:AAFi_8scmYXMfAY2a_onMR_jJ3Kgo0iMpOw'
+token = 'ИСПОЛЬЗУЙТЕ ТОКЕН ВАШЕГО ТЕЛЕГРАМ БОТА И ВСТАВЬТЕ СЮДА'
 bot = telebot.TeleBot(token=token, parse_mode=None)
 
 @bot.message_handler(commands=['start'])
